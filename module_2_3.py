@@ -1,10 +1,10 @@
 my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-my_list.remove(0)
 i = 0
 while i < len(my_list):
+    if my_list[0] == 0:
+        continue
     if my_list[i] > 0:
         print(my_list[i])
-    else:
+    elif my_list[i] < 0:
         break
     i += 1
-
