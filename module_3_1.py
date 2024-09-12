@@ -1,14 +1,16 @@
 call = 0
 def count_call():
     global call
-    call += 4
+    call += 1
 def string_info(string):
     return len(string), string.upper(), string.lower()
+    count_call()
 def is_contains(string, list_to_search):
     for item in list_to_search:
         if item.casefold() == string.casefold():
             return True
     return False
+    count_call()
 count_call()
 
 print(string_info('dva'))
